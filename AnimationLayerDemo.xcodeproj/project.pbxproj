@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90495B3422D2294900AE3A3F /* UIView+QuartzDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 90495B3322D2294900AE3A3F /* UIView+QuartzDemo.m */; };
 		90A63E3622CF39AB00FC773A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A63E3522CF39AB00FC773A /* AppDelegate.m */; };
 		90A63E3922CF39AB00FC773A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A63E3822CF39AB00FC773A /* ViewController.m */; };
 		90A63E3C22CF39AB00FC773A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A63E3A22CF39AB00FC773A /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		90495B3222D2294900AE3A3F /* UIView+QuartzDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+QuartzDemo.h"; sourceTree = "<group>"; };
+		90495B3322D2294900AE3A3F /* UIView+QuartzDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+QuartzDemo.m"; sourceTree = "<group>"; };
 		90A63E3122CF39AB00FC773A /* AnimationLayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationLayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A63E3422CF39AB00FC773A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90A63E3522CF39AB00FC773A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 				90A63E3522CF39AB00FC773A /* AppDelegate.m */,
 				90A63E3722CF39AB00FC773A /* ViewController.h */,
 				90A63E3822CF39AB00FC773A /* ViewController.m */,
+				90495B3222D2294900AE3A3F /* UIView+QuartzDemo.h */,
+				90495B3322D2294900AE3A3F /* UIView+QuartzDemo.m */,
 				90A63E3A22CF39AB00FC773A /* Main.storyboard */,
 				90A63E3D22CF39AD00FC773A /* Assets.xcassets */,
 				90A63E3F22CF39AD00FC773A /* LaunchScreen.storyboard */,
@@ -143,6 +148,7 @@
 			files = (
 				90A63E3922CF39AB00FC773A /* ViewController.m in Sources */,
 				90A63E4422CF39AD00FC773A /* main.m in Sources */,
+				90495B3422D2294900AE3A3F /* UIView+QuartzDemo.m in Sources */,
 				90A63E3622CF39AB00FC773A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

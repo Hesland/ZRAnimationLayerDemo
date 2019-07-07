@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIView+QuartzDemo.h"
 
 @interface ViewController ()
 
@@ -26,6 +27,7 @@
 }
 
 - (void)createNewLayerWithBezierPath {
+    // 创建贝塞尔曲线，根据贝塞尔曲线的状态来变更Layer视图
     UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, 200, 200)];
     path.lineWidth = 5.0;
     
@@ -94,35 +96,7 @@
 //    [self drawRectWithRect:rect];
 }
 
-- (void)drawRectWithRect:(CGRect)rect {
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetStrokeColorWithColor(context, [UIColor grayColor].CGColor);
-    CGContextSetLineWidth(context, 6);
-    
-    CGContextAddRect(context, CGRectMake(10, 10, 80, 80));
-    CGContextDrawPath(context, kCGPathStroke);
-}
 
-- (void)drawCircleWithRect:(CGRect)rect {
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
-    
-    // 设置画笔宽度
-    CGFloat lineWidth = 5;
-    CGContextSetLineWidth(context, lineWidth);
-    
-    // 设置曲线相关属性
-    CGFloat centerX = CGRectGetWidth(rect)  * 0.5;
-    CGFloat centerY = CGRectGetHeight(rect) * 0.5;
-    CGFloat radius = MIN(self.frame.size.width, self.frame.size.height);
-    
-    CGFloat cusRadius = radius * 0.5 - lineWidth * 0.5;
-    double PI = 3.14159265358979323846;
-    
-    // 设置绘制路径
-    CGContextAddArc(context, centerX, centerY, cusRadius, 0, 2 * PI, NO);
-    CGContextDrawPath(context, kCGPathStroke);
-}
 
 
 @end
