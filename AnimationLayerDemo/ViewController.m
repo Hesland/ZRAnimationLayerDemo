@@ -13,19 +13,36 @@
 
 @property (nonatomic, strong) CALayer *layer;
 
+@property (nonatomic, strong) UISlider *slider;
+@property (nonatomic, strong) UIProgressView *progressView;
+@property (nonatomic, strong) ZRDrawView *zrProgressView;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     ZRDrawView *view = [[ZRDrawView alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:view];
     [self.view bringSubviewToFront:view];
-    
+    [self.view addSubview:view];
+
+//    [self createProgressView];
+
 //    [self createNewLayerWithBezierPath];
+}
+
+- (void)createProgressView {
+    self.slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 100)];
+    [self.slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
     
+    [self.view addSubview:self.slider];
+    self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 100)];
+    [self.view addSubview:self.progressView];
+}
+
+- (void)sliderValueChanged:(UISlider *)sender {
+    self.progressView.progress = sender.value;
 }
 
 - (void)createNewLayerWithBezierPath {

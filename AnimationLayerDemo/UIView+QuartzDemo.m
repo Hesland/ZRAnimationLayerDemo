@@ -63,7 +63,6 @@
     CGContextDrawPath(context, kCGPathFillStroke);
     
     CFRelease(mutablePath);
-    
 }
 
 // 绘制矩形
