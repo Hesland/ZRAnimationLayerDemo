@@ -10,7 +10,64 @@
 
 @implementation UIView (QuartzDemo)
 
-- (void)drawRectWithRect:(CGRect)rect {
+// 绘制直线
+- (void)zr_drawLinesWithRect:(CGRect)rect {
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    // 绘制方式对比 UIBezierPath
+    CGMutablePathRef mutablePath = CGPathCreateMutable();
+    // 牵扯到动画的变量
+//    CGAffineTransform transform =
+    CGPathMoveToPoint(mutablePath, NULL, 50, 50);
+    CGPathAddLineToPoint(mutablePath, NULL, 200, 200);
+    
+    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
+    CGContextAddPath(context, mutablePath);
+    
+    /*
+     绘制接口
+     */
+//    CGContextStrokePath(context);
+    CGContextDrawPath(context, kCGPathStroke);
+    
+    // path 在结束后需要释放
+    CFRelease(mutablePath);
+}
+
+// 绘制多边形
+- (void)zr_drawPolygonWithRect:(CGRect)rect points:(NSArray *)points {
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGMutablePathRef mutablePath = CGPathCreateMutable();
+    
+    __block CGPoint startPoint = CGPointMake(MAXFLOAT, MAXFLOAT);
+    [points enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        CGPoint point = [obj CGPointValue];
+        CGFloat x = point.x;
+        CGFloat y = point.y;
+        if (idx == 0) {
+            startPoint = CGPointMake(x, y);
+            CGPathMoveToPoint(mutablePath, NULL, x, y);
+        } else {
+            CGPathAddLineToPoint(mutablePath, NULL, x, y);
+        }
+    }];
+    
+    if (startPoint.x != MAXFLOAT && startPoint.y != MAXFLOAT) {
+        CGPathAddLineToPoint(mutablePath, NULL, startPoint.x, startPoint.y);
+    }
+//    CGContextClosePath(context);
+    
+    CGContextSetFillColorWithColor(context, [UIColor yellowColor].CGColor);
+    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
+    
+    CGContextAddPath(context, mutablePath);
+    CGContextDrawPath(context, kCGPathFillStroke);
+    
+    CFRelease(mutablePath);
+    
+}
+
+// 绘制矩形
+- (void)zr_drawRectWithRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetStrokeColorWithColor(context, [UIColor grayColor].CGColor);
     CGContextSetLineWidth(context, 6);
@@ -19,7 +76,8 @@
     CGContextDrawPath(context, kCGPathStroke);
 }
 
-- (void)drawCircleWithRect:(CGRect)rect {
+// 绘制曲线
+- (void)zr_drawCircleWithRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
     

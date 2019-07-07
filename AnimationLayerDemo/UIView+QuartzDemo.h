@@ -12,8 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (QuartzDemo)
 
-- (void)drawRectWithRect:(CGRect)rect;
-- (void)drawCircleWithRect:(CGRect)rect;
+- (void)zr_drawLinesWithRect:(CGRect)rect;
+- (void)zr_drawRectWithRect:(CGRect)rect;
+- (void)zr_drawCircleWithRect:(CGRect)rect;
+- (void)zr_drawPolygonWithRect:(CGRect)rect points:(NSArray *)points;
+
+// Histogram:直方图
 
 @end
 

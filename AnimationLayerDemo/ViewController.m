@@ -15,14 +15,16 @@
 
 @end
 
-@class ZRCircleView;
-
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self createNewLayerWithBezierPath];
+    ZRDrawView *view = [[ZRDrawView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:view];
+    [self.view bringSubviewToFront:view];
+    
+//    [self createNewLayerWithBezierPath];
     
 }
 
@@ -74,7 +76,7 @@
 - (void)setLayerImageWithImageName:(NSString *)imageName {
     UIImage *image = [UIImage imageNamed:imageName];
     if (image) {
-        self.layer.contents = (__bridge id)image.CGImage;
+        self.layer.contents = (__bridge id)image.CGImage; // 将图片绘制到 layer 上
     }
 }
 
@@ -92,11 +94,14 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    [self drawCircleWithRect:rect];
-//    [self drawRectWithRect:rect];
+    NSValue *firstPoint = [NSValue valueWithCGPoint:CGPointMake(50, 50)];
+    NSValue *secondPoint = [NSValue valueWithCGPoint:CGPointMake(100, 100)];
+    NSValue *thirdPoint = [NSValue valueWithCGPoint:CGPointMake(120, 80)];
+    
+    [self zr_drawPolygonWithRect:rect points:@[firstPoint, secondPoint, thirdPoint]];
+//    [self zr_drawLinesWithRect:rect];
+//    [self zr_drawCircleWithRect:rect];
+//    [self zr_drawRectWithRect:rect];
 }
-
-
-
 
 @end
