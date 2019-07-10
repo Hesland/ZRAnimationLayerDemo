@@ -26,18 +26,17 @@
     ZRDrawView *view = [[ZRDrawView alloc] initWithFrame:self.view.frame];
     [self.view bringSubviewToFront:view];
     [self.view addSubview:view];
-
 //    [self createProgressView];
 
 //    [self createNewLayerWithBezierPath];
 }
 
 - (void)createProgressView {
-    self.slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 100)];
+    self.slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
     [self.slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
     
     [self.view addSubview:self.slider];
-    self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 100)];
+    self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, 100)];
     [self.view addSubview:self.progressView];
 }
 
@@ -83,7 +82,7 @@
 - (void)createNewLayer {
     CALayer *layer = [[CALayer alloc] init];
     layer.backgroundColor = [UIColor redColor].CGColor;
-    layer.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200);
+    layer.frame = CGRectMake(0, 0, SCREEN_WIDTH, 200);
     
     [self.view.layer addSublayer:layer];
     

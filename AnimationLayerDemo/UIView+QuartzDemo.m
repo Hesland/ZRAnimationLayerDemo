@@ -90,10 +90,9 @@
     CGFloat radius = MIN(self.frame.size.width, self.frame.size.height);
     
     CGFloat cusRadius = radius * 0.5 - lineWidth * 0.5;
-    double PI = 3.14159265358979323846;
     
     // 设置绘制路径
-    CGContextAddArc(context, centerX, centerY, cusRadius, 0, 2 * PI, NO);
+    CGContextAddArc(context, centerX, centerY, cusRadius, 0, 2 * M_PI, NO);
     CGContextDrawPath(context, kCGPathStroke);
 }
 

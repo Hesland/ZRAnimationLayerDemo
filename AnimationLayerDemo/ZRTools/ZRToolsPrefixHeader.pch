@@ -1,0 +1,78 @@
+//
+//  ZRToolsPrefixHeader.pch
+//  ZRTools
+//
+//  Created by Hesland on 2018/8/25.
+//  Copyright © 2018年 ZRTools. All rights reserved.
+//
+
+#ifndef ZRToolsPrefixHeader_pch
+#define ZRToolsPrefixHeader_pch
+
+#define __AVAILABILITY_TOO_NEW __attribute__((deprecated("TOO NEW!"))) __attribute__((weak_import))
+#undef __AVAILABILITY_INTERNAL__IPHONE_6_0 //__AVAILABILITY_TOO_NEW
+#define __AVAILABILITY_INTERNAL__IPHONE_6_0 __AVAILABILITY_TOO_NEW
+#undef __AVAILABILITY_INTERNAL__IPHONE_6_1 //__AVAILABILITY_TOO_NEW
+#define __AVAILABILITY_INTERNAL__IPHONE_6_1 __AVAILABILITY_TOO_NEW
+#undef __AVAILABILITY_INTERNAL__IPHONE_7_0 //__AVAILABILITY_TOO_NEW
+#define __AVAILABILITY_INTERNAL__IPHONE_7_0 __AVAILABILITY_TOO_NEW
+
+#ifdef __OBJC__
+#import <Availability.h>
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <WebKit/WebKit.h>
+
+/**
+ *  3方库
+ *
+ */
+#import "Masonry.h"
+
+#endif
+
+/**
+ 屏幕尺寸
+ */
+
+#define SCREEN_BOUNDS [UIScreen mainScreen].bounds
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
+
+/**
+ *  颜色赋值
+ */
+#define ZRColorFromRGBaLpha(_rgbValue, _alpha)              [UIColor colorWithRed:((float)((_rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((_rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(_rgbValue & 0xFF))/255.0 alpha:_alpha]
+#define ZRRGBA(r,g,b,a)   [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:a]
+#define ZRRGB(r,g,b)      ZRRGBA(r, g, b, 1.0f)
+
+#define ZRFONT(s)                 [UIFont systemFontOfSize:s]
+#define ZRBOLD_FONT(s)            [UIFont boldSystemFontOfSize:s]
+
+/**
+ *  系统版本判断
+ */
+
+#define systemVersion                                                 [[[UIDevice currentDevice] systemVersion] floatValue]
+
+#define LATER_iOS11                                                   (SYSVERSION > 11.0)
+#define BELOW_iOS9                                                    (SYSVERSION < 9.0)
+#define BELOW_iOS8                                                    (SYSVERSION < 8.0)
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+
+#define image_url @"https://img.dongqiudi.com/uploads/attachments/2017/08/11/GCYNHOHOBTHIDDYRIFRS.jpg!app.att.index"
+
+#define ZRScaleImage(urlString,width,height)  [NSString stringWithFormat:@"%@?imageMogr2/thumbnail/!%@x%@r/strip/interlace/1/quality/85/format/jpg|imageView2/1/w/%@/h/%@",urlString,width,height,width,height]
+#define ZRLOGIN_SUCCESSNOTIFICATION @"LOGINSUCCESS"
+#define ZRREGISTER_SUCCESSNOTIFICATION @"REGISTERSUCCESS"
+#define ZRLOGINOUT_SUCCESSNOTIFICATION @"LOGINOUTSUCCESS"
+#define head_height 244+50+50
+
+#define ZRpagesize 10
+#define safeTopM(v) @available(iOS 11.0,*) ? v.mas_safeAreaLayoutGuideTop : v
+#define safeTopF(v) @available(iOS 11.0,*) ? v.safeAreaInsets.top : 0
+#define safeHeightF(v) @available(iOS 11.0,*) ? v.safeAreaInsets.top : 0
+
+#endif /* ZRToolsPrefixHeader_pch */
