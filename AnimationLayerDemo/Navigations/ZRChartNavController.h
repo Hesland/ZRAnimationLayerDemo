@@ -6,11 +6,11 @@
 //  Copyright © 2019 ZRTools. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ZRBaseNavigationController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZRChartNavController : UINavigationController
+@interface ZRChartNavController : ZRBaseNavigationController
 
 @end
 

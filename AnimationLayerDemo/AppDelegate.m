@@ -17,7 +17,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:SCREEN_BOUNDS];
     ZRTabbarController *tabBarController = [[ZRTabbarController alloc] init];
     self.window.rootViewController = tabBarController;

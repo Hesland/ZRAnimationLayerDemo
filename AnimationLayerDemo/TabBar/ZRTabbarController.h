@@ -1,5 +1,5 @@
 //
-//  ZRChartViewController.h
+//  ZRTabbarController.h
 //  AnimationLayerDemo
 //
 //  Created by Hesland on 2019/7/10.
@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZRBaseTabBarController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZRChartViewController : UIViewController
+@interface ZRTabbarController : UITabBarController
 
 @end
 
