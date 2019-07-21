@@ -46,8 +46,6 @@
     self.view.backgroundColor = [UIColor redColor];
 }
 
-
-
 - (void)creatleftBarButtonItem {
 //    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"icon_back_default" highlightImageName:@"icon_back_default" target:self action:@selector(backViewController:)];
 }

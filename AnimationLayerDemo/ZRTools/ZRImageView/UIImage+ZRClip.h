@@ -10,18 +10,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIImageView (ZRClip)
-
+@interface UIImage (ZRClip)
 
 /**
- Create a rounded image view with required image.
+ Create a rounded image with target image name.
  Rect and corner radius are caculated by image size.
 
- @param image Setup image view's image.
+ @param imageName Image's name or path.
  @return UIImageView object.
  */
 
-+ (instancetype)zr_clipRoundedImageWithImage:(UIImage * _Nonnull)image;
++ (instancetype)zr_clipRoundedImageWithImageName:(NSString * _Nonnull)imageName;
 
 @end
 

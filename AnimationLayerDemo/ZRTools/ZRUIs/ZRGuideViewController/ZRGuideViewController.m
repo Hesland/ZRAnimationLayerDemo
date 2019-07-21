@@ -74,7 +74,6 @@
 }
 
 - (void)setGuidePageImageFrame {
-    CGRect          screenBounds     = [[UIScreen mainScreen] bounds];
     //    CGFloat         height           = MAX(screenBounds.size.height,screenBounds.size.width);
     NSMutableArray *splashImageNames = [NSMutableArray array];
     for (int i = 1; i <= self.index; i++) {
@@ -118,7 +117,7 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     CGFloat offsetWidth = self.guideScrollView.contentOffset.x;
-    int     pageNum     = offsetWidth / SCREEN_WIDTH;
+    int pageNum = offsetWidth / SCREEN_WIDTH;
     if (offsetWidth > (self.index - 1) * SCREEN_WIDTH) {
         [UIView animateWithDuration:1.25 animations:^{
             CGAffineTransform newTRansform = CGAffineTransformMakeScale(1.2, 1.2);
@@ -127,7 +126,6 @@
         } completion:^(BOOL finished) {
             [UIView animateWithDuration:1.2 animations:^{
                 [(UIImageView*)[self.guideScrollView.subviews lastObject] setAlpha:0];
-                
                 [(UIImageView*)[self.guideScrollView.subviews lastObject] setAlpha:0];
             } completion:^(BOOL finished) {
                 if (self.block) {

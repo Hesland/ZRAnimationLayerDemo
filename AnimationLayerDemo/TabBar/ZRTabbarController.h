@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZRTabbarController : UITabBarController
+@interface ZRTabbarController : ZRBaseTabBarController
 
 @end
 

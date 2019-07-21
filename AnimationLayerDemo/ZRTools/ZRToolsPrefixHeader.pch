@@ -9,13 +9,13 @@
 #ifndef ZRToolsPrefixHeader_pch
 #define ZRToolsPrefixHeader_pch
 
-#define __AVAILABILITY_TOO_NEW __attribute__((deprecated("TOO NEW!"))) __attribute__((weak_import))
-#undef __AVAILABILITY_INTERNAL__IPHONE_6_0 //__AVAILABILITY_TOO_NEW
-#define __AVAILABILITY_INTERNAL__IPHONE_6_0 __AVAILABILITY_TOO_NEW
-#undef __AVAILABILITY_INTERNAL__IPHONE_6_1 //__AVAILABILITY_TOO_NEW
-#define __AVAILABILITY_INTERNAL__IPHONE_6_1 __AVAILABILITY_TOO_NEW
-#undef __AVAILABILITY_INTERNAL__IPHONE_7_0 //__AVAILABILITY_TOO_NEW
-#define __AVAILABILITY_INTERNAL__IPHONE_7_0 __AVAILABILITY_TOO_NEW
+//#define __AVAILABILITY_TOO_NEW __attribute__((deprecated("TOO NEW!"))) __attribute__((weak_import))
+//#undef __AVAILABILITY_INTERNAL__IPHONE_6_0 //__AVAILABILITY_TOO_NEW
+//#define __AVAILABILITY_INTERNAL__IPHONE_6_0 __AVAILABILITY_TOO_NEW
+//#undef __AVAILABILITY_INTERNAL__IPHONE_6_1 //__AVAILABILITY_TOO_NEW
+//#define __AVAILABILITY_INTERNAL__IPHONE_6_1 __AVAILABILITY_TOO_NEW
+//#undef __AVAILABILITY_INTERNAL__IPHONE_7_0 //__AVAILABILITY_TOO_NEW
+//#define __AVAILABILITY_INTERNAL__IPHONE_7_0 __AVAILABILITY_TOO_NEW
 
 #ifdef __OBJC__
 #import <Availability.h>
@@ -42,7 +42,7 @@
 /**
  *  颜色赋值
  */
-#define ZRColorFromRGBaLpha(_rgbValue, _alpha)              [UIColor colorWithRed:((float)((_rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((_rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(_rgbValue & 0xFF))/255.0 alpha:_alpha]
+#define ZRColorFromRGBAlpha(_rgbValue, _alpha)              [UIColor colorWithRed:((float)((_rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((_rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(_rgbValue & 0xFF))/255.0 alpha:_alpha]
 #define ZRRGBA(r,g,b,a)   [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:a]
 #define ZRRGB(r,g,b)      ZRRGBA(r, g, b, 1.0f)
 
@@ -59,7 +59,8 @@
 #define BELOW_iOS9                                                    (SYSVERSION < 9.0)
 #define BELOW_iOS8                                                    (SYSVERSION < 8.0)
 
-#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+#define weakify(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+#define strongify(strongSelf)  __strong __typeof(&*self)strongSelf = self;
 
 
 #define image_url @"https://img.dongqiudi.com/uploads/attachments/2017/08/11/GCYNHOHOBTHIDDYRIFRS.jpg!app.att.index"
@@ -74,5 +75,14 @@
 #define safeTopM(v) @available(iOS 11.0,*) ? v.mas_safeAreaLayoutGuideTop : v
 #define safeTopF(v) @available(iOS 11.0,*) ? v.safeAreaInsets.top : 0
 #define safeHeightF(v) @available(iOS 11.0,*) ? v.safeAreaInsets.top : 0
+
+
+#define ZRCreateDirIfNeed(path) ({\
+NSFileManager *fileManager = [NSFileManager defaultManager];\
+BOOL isDir = NO;\
+BOOL existed = [fileManager fileExistsAtPath:path isDirectory:&isDir];\
+if (!(isDir == YES && existed == YES)) {\
+[fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];}\
+});\
 
 #endif /* ZRToolsPrefixHeader_pch */

@@ -38,6 +38,13 @@
 		904FCB3B22DF655600A25AB3 /* ZRTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FCB3A22DF655600A25AB3 /* ZRTabbarController.m */; };
 		904FCB3F22DF659100A25AB3 /* ZRAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FCB3E22DF659100A25AB3 /* ZRAnimationViewController.m */; };
 		904FCB4222DF6DE800A25AB3 /* ZRClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FCB4122DF6DE800A25AB3 /* ZRClockViewController.m */; };
+		904FCB4522E049BA00A25AB3 /* ZRBasicAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FCB4422E049BA00A25AB3 /* ZRBasicAnimationViewController.m */; };
+		904FCB4922E1722100A25AB3 /* UIImage+ZRClip.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FCB4822E1722100A25AB3 /* UIImage+ZRClip.m */; };
+		904FCB4C22E1A4D700A25AB3 /* ZRImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FCB4B22E1A4D700A25AB3 /* ZRImageManager.m */; };
+		904FCB4F22E1A4F600A25AB3 /* UIImageView+ZRClip.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FCB4E22E1A4F600A25AB3 /* UIImageView+ZRClip.m */; };
+		904FCB5222E1A64500A25AB3 /* UIImage+ZRWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FCB5122E1A64500A25AB3 /* UIImage+ZRWebCache.m */; };
+		904FCB5522E42A8500A25AB3 /* ZRAnimationGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FCB5422E42A8500A25AB3 /* ZRAnimationGroupViewController.m */; };
+		904FCB5B22E52E5900A25AB3 /* ZRKeyframeAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FCB5922E52E5800A25AB3 /* ZRKeyframeAnimationViewController.m */; };
 		90A63E3622CF39AB00FC773A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A63E3522CF39AB00FC773A /* AppDelegate.m */; };
 		90A63E3922CF39AB00FC773A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A63E3822CF39AB00FC773A /* ViewController.m */; };
 		90A63E3C22CF39AB00FC773A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A63E3A22CF39AB00FC773A /* Main.storyboard */; };
@@ -113,6 +120,20 @@
 		904FCB3E22DF659100A25AB3 /* ZRAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRAnimationViewController.m; sourceTree = "<group>"; };
 		904FCB4022DF6DE800A25AB3 /* ZRClockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRClockViewController.h; sourceTree = "<group>"; };
 		904FCB4122DF6DE800A25AB3 /* ZRClockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRClockViewController.m; sourceTree = "<group>"; };
+		904FCB4322E049BA00A25AB3 /* ZRBasicAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRBasicAnimationViewController.h; sourceTree = "<group>"; };
+		904FCB4422E049BA00A25AB3 /* ZRBasicAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRBasicAnimationViewController.m; sourceTree = "<group>"; };
+		904FCB4722E1722100A25AB3 /* UIImage+ZRClip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZRClip.h"; sourceTree = "<group>"; };
+		904FCB4822E1722100A25AB3 /* UIImage+ZRClip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZRClip.m"; sourceTree = "<group>"; };
+		904FCB4A22E1A4D700A25AB3 /* ZRImageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRImageManager.h; sourceTree = "<group>"; };
+		904FCB4B22E1A4D700A25AB3 /* ZRImageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRImageManager.m; sourceTree = "<group>"; };
+		904FCB4D22E1A4F600A25AB3 /* UIImageView+ZRClip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZRClip.h"; sourceTree = "<group>"; };
+		904FCB4E22E1A4F600A25AB3 /* UIImageView+ZRClip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ZRClip.m"; sourceTree = "<group>"; };
+		904FCB5022E1A64500A25AB3 /* UIImage+ZRWebCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZRWebCache.h"; sourceTree = "<group>"; };
+		904FCB5122E1A64500A25AB3 /* UIImage+ZRWebCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZRWebCache.m"; sourceTree = "<group>"; };
+		904FCB5322E42A8500A25AB3 /* ZRAnimationGroupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRAnimationGroupViewController.h; sourceTree = "<group>"; };
+		904FCB5422E42A8500A25AB3 /* ZRAnimationGroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRAnimationGroupViewController.m; sourceTree = "<group>"; };
+		904FCB5922E52E5800A25AB3 /* ZRKeyframeAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRKeyframeAnimationViewController.m; sourceTree = "<group>"; };
+		904FCB5A22E52E5800A25AB3 /* ZRKeyframeAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRKeyframeAnimationViewController.h; sourceTree = "<group>"; };
 		90A63E3122CF39AB00FC773A /* AnimationLayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationLayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A63E3422CF39AB00FC773A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90A63E3522CF39AB00FC773A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -152,6 +173,7 @@
 			children = (
 				90495B8E22D57F8100AE3A3F /* ZRToolsPrefixHeader.pch */,
 				90495B7722D57F8100AE3A3F /* ZRBases */,
+				904FCB4622E171D500A25AB3 /* ZRImageView */,
 				90495B8F22D57F8100AE3A3F /* ZRNetworks */,
 				90495B9022D57F8100AE3A3F /* ZRUIs */,
 			);
@@ -326,8 +348,29 @@
 				904FCB3E22DF659100A25AB3 /* ZRAnimationViewController.m */,
 				904FCB4022DF6DE800A25AB3 /* ZRClockViewController.h */,
 				904FCB4122DF6DE800A25AB3 /* ZRClockViewController.m */,
+				904FCB4322E049BA00A25AB3 /* ZRBasicAnimationViewController.h */,
+				904FCB4422E049BA00A25AB3 /* ZRBasicAnimationViewController.m */,
+				904FCB5322E42A8500A25AB3 /* ZRAnimationGroupViewController.h */,
+				904FCB5422E42A8500A25AB3 /* ZRAnimationGroupViewController.m */,
+				904FCB5A22E52E5800A25AB3 /* ZRKeyframeAnimationViewController.h */,
+				904FCB5922E52E5800A25AB3 /* ZRKeyframeAnimationViewController.m */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		904FCB4622E171D500A25AB3 /* ZRImageView */ = {
+			isa = PBXGroup;
+			children = (
+				904FCB5022E1A64500A25AB3 /* UIImage+ZRWebCache.h */,
+				904FCB5122E1A64500A25AB3 /* UIImage+ZRWebCache.m */,
+				904FCB4722E1722100A25AB3 /* UIImage+ZRClip.h */,
+				904FCB4822E1722100A25AB3 /* UIImage+ZRClip.m */,
+				904FCB4D22E1A4F600A25AB3 /* UIImageView+ZRClip.h */,
+				904FCB4E22E1A4F600A25AB3 /* UIImageView+ZRClip.m */,
+				904FCB4A22E1A4D700A25AB3 /* ZRImageManager.h */,
+				904FCB4B22E1A4D700A25AB3 /* ZRImageManager.m */,
+			);
+			path = ZRImageView;
 			sourceTree = "<group>";
 		};
 		90A63E2822CF39AB00FC773A = {
@@ -445,7 +488,9 @@
 				904FCB3F22DF659100A25AB3 /* ZRAnimationViewController.m in Sources */,
 				90495B9A22D57F8100AE3A3F /* ZRBaseTableView.m in Sources */,
 				90A63E3922CF39AB00FC773A /* ViewController.m in Sources */,
+				904FCB4C22E1A4D700A25AB3 /* ZRImageManager.m in Sources */,
 				90495BC622D580B100AE3A3F /* MASViewAttribute.m in Sources */,
+				904FCB4922E1722100A25AB3 /* UIImage+ZRClip.m in Sources */,
 				90495B9722D57F8100AE3A3F /* ZRBaseScrollView.m in Sources */,
 				90495BBD22D580B100AE3A3F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				90495BC122D580B100AE3A3F /* MASLayoutConstraint.m in Sources */,
@@ -453,16 +498,21 @@
 				90495B3F22D5769B00AE3A3F /* ZRChartNavController.m in Sources */,
 				904FCB4222DF6DE800A25AB3 /* ZRClockViewController.m in Sources */,
 				90495B3422D2294900AE3A3F /* UIView+QuartzDemo.m in Sources */,
+				904FCB5B22E52E5900A25AB3 /* ZRKeyframeAnimationViewController.m in Sources */,
 				90495BC322D580B100AE3A3F /* View+MASAdditions.m in Sources */,
+				904FCB5222E1A64500A25AB3 /* UIImage+ZRWebCache.m in Sources */,
 				90495B9422D57F8100AE3A3F /* ZRCollectionViewController.m in Sources */,
 				90495B9922D57F8100AE3A3F /* ZRBaseViewController.m in Sources */,
+				904FCB4522E049BA00A25AB3 /* ZRBasicAnimationViewController.m in Sources */,
 				90495BC522D580B100AE3A3F /* MASViewConstraint.m in Sources */,
+				904FCB4F22E1A4F600A25AB3 /* UIImageView+ZRClip.m in Sources */,
 				90495B9B22D57F8100AE3A3F /* ZRTableViewController.m in Sources */,
 				90495BC022D580B100AE3A3F /* MASConstraintMaker.m in Sources */,
 				90495BC222D580B100AE3A3F /* NSArray+MASAdditions.m in Sources */,
 				90495B9822D57F8100AE3A3F /* ZRScrollViewController.m in Sources */,
 				90495BBE22D580B100AE3A3F /* ViewController+MASAdditions.m in Sources */,
 				90495B9622D57F8100AE3A3F /* ZRBaseTabBarController.m in Sources */,
+				904FCB5522E42A8500A25AB3 /* ZRAnimationGroupViewController.m in Sources */,
 				904FCB3722DF64F800A25AB3 /* ZRHistogramViewController.m in Sources */,
 				90495B9522D57F8100AE3A3F /* ZRBaseCollectionView.m in Sources */,
 				90495BC422D580B100AE3A3F /* MASConstraint.m in Sources */,

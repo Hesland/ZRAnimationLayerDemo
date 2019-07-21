@@ -6,44 +6,60 @@
 //  Copyright © 2019 ZRTools. All rights reserved.
 //
 
-#import "UIImageView+ZRClip.h"
+#import "UIImage+ZRClip.h"
+#import "ZRImageManager.h"
+#define ZRRoundImagesPath [NSString stringWithFormat:@"%@/Documents/RoundImages/", NSHomeDirectory()]
 
-@implementation UIImageView (ZRClip)
+@implementation UIImage (ZRClip)
 
-+ (instancetype)zr_clipRoundedImageWithImage:(UIImage * _Nonnull)image {
-    CGRect rect = (CGRect){{0, 0}, image.size};
-    CGFloat radius = MIN(image.size.width, image.size.height);
++ (instancetype)zr_clipRoundedImageWithImageName:(NSString * _Nonnull)imageName {
+    UIImage *targetImage = nil;
+    // memory cache -> hash map
+    NSMutableDictionary *images = [ZRImageManager sharedManager].images;
+    if ([images objectForKey:imageName]) {
+        targetImage = (UIImage *)[images objectForKey:imageName];
+    } else {
+        // URLCache
+        ZRCreateDirIfNeed(ZRRoundImagesPath);
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        NSString *imagePath = [NSString stringWithFormat:@"%@%@@2x.jpg", ZRRoundImagesPath, imageName];
+        BOOL imageExist = [fileManager fileExistsAtPath:imagePath];
+        if (imageExist) {
+            targetImage = [[UIImage alloc] initWithContentsOfFile:imagePath];
+        } else {
+            UIImage *image = [UIImage imageNamed:imageName];
+            if (image == nil) {
+                return nil;
+            }
+            
+            CGSize size = image.size;
+            CGRect rect = CGRectMake(0, 0, size.width, size.height);
+            
+            UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
+            CGContextRef context = UIGraphicsGetCurrentContext();
+            UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerAllCorners cornerRadii:size];
+            CGContextAddPath(context, path.CGPath);
+            CGContextClip(context);
+            [image drawInRect:rect];
+            CGContextDrawPath(context, kCGPathFillStroke);
+            
+            UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            // memory cache
+            [[ZRImageManager sharedManager].images setObject:newImage forKey:imageName];
+            // URLCache
+            NSData *imageData = UIImagePNGRepresentation(newImage);
+            // 缩略处理可用
+//            UIImageJPEGRepresentation(<#UIImage * _Nonnull image#>, <#CGFloat compressionQuality#>)
+            
+            [imageData writeToFile:imagePath atomically:NO];
+            targetImage = newImage;
+        }
+    }
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-    
-//    UIGraphicsBeginImageContextWithOptions(image.size, NO, 0.0);
-//
-//    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:radius];
-//    [path addClip];
-//
-//    [imageView drawRect:rect];
-//    UIImage *clipedImage = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
-    
-//    imageView.image = clipedImage;
-    imageView.image = [UIImageView zr_image_clipRoundedImageWithImage:image];
-    return imageView;
+    return targetImage;
 }
 
-+ (UIImage *)zr_image_clipRoundedImageWithImage:(UIImage * _Nonnull)image {
-    
-    CGSize size = image.size;
-    CGFloat radius = MIN(image.size.width, image.size.height);
-    CGRect rect = CGRectMake(0, 0, size.width, size.height); UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(radius, radius)];
-    CGContextAddPath(ctx,path.CGPath);
-    CGContextClip(ctx);
-    [image drawInRect:rect];
-    CGContextDrawPath(ctx, kCGPathFillStroke);
-    UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return newImage;
-}
+
 
 @end

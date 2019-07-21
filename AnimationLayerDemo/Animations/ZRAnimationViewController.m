@@ -6,15 +6,17 @@
 //  Copyright © 2019 ZRTools. All rights reserved.
 //
 
-#import "ZRAnimationViewController.h"
 #import "ZRClockViewController.h"
+#import "ZRAnimationViewController.h"
+#import "ZRBasicAnimationViewController.h"
+#import "ZRAnimationGroupViewController.h"
+#import "ZRKeyframeAnimationViewController.h"
 
-#define ZRTableViewCellCount 1
+#define ZRTableViewCellCount 4
 
 @interface ZRAnimationViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
-
 
 @end
 
@@ -42,7 +44,21 @@
             cell.textLabel.text = @"clock";
         }
             break;
-            
+        case 1: {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"basicAnimation"];
+            cell.textLabel.text = @"basic animation";
+        }
+            break;
+        case 2: {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"animationGroup"];
+            cell.textLabel.text = @"animation group";
+        }
+            break;
+        case 3: {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"keyFrameAnimation"];
+            cell.textLabel.text = @"key frame animation";
+        }
+            break;
         default:
             break;
     }
@@ -51,16 +67,30 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ZRBaseViewController *viewController = nil;
     switch (indexPath.row) {
         case 0: {
-            ZRClockViewController *clock = [[ZRClockViewController alloc] init];
-            [self.navigationController pushViewController:clock animated:YES];
+            viewController = [[ZRClockViewController alloc] init];
+        }
+            break;
+        case 1: {
+            viewController = [[ZRBasicAnimationViewController alloc] init];
+        }
+            break;
+        case 2: {
+            viewController = [[ZRAnimationGroupViewController alloc] init];
+        }
+            break;
+        case 3: {
+            viewController = [[ZRKeyframeAnimationViewController alloc] init];
         }
             break;
             
         default:
             break;
     }
+    
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 @end

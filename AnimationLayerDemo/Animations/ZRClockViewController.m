@@ -7,6 +7,7 @@
 //
 
 #import "ZRClockViewController.h"
+#import "UIImage+ZRClip.h"
 
 #define ZRRedColor      [UIColor redColor]
 #define ZRDarkGrayColor [UIColor darkGrayColor]
@@ -22,18 +23,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.title = @"clock";
     
+    UIImage *image = [UIImage zr_clipRoundedImageWithImageName:@"clock"];
     CALayer *layer = [[CALayer alloc] init];
-    layer.bounds = CGRectMake(0, 0, 150, 150);
+    layer.frame = (CGRect){{0, 0}, image.size};
     layer.position = self.view.center;
-    
-    // 添加去白绘制 - 建议直接绘制
-    layer.cornerRadius = 75;
-    layer.masksToBounds = YES;
-    
-    layer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"clock"].CGImage);
+    layer.contents = (__bridge id _Nullable)(image.CGImage);
     
     [self.view.layer addSublayer:layer];
     
@@ -65,14 +61,13 @@
     [link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 }
 
-- (void)clockRunning{
+- (void)clockRunning {
     NSTimeZone *tZone = [NSTimeZone localTimeZone];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     calendar.timeZone = tZone;
     NSDate *currentDate = [NSDate date];
     
     NSDateComponents *currentTime = [calendar components:NSCalendarUnitSecond|NSCalendarUnitMinute|NSCalendarUnitHour|NSCalendarUnitTimeZone fromDate:currentDate];
-    
     
     CGFloat angle = M_PI * 2 * currentTime.second / 60;
     self.secondView.transform = CGAffineTransformMakeRotation(angle);

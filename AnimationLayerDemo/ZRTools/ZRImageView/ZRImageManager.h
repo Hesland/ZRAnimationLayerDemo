@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZRImageManager : NSObject
 
+@property (nonatomic, strong) NSMutableDictionary *images;
+
++ (instancetype)sharedManager;
+
 @end
 
 NS_ASSUME_NONNULL_END

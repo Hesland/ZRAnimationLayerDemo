@@ -8,6 +8,21 @@
 
 #import "ZRImageManager.h"
 
+@interface ZRImageManager ()
+
+@end
+
 @implementation ZRImageManager
+
++ (instancetype)sharedManager {
+    static ZRImageManager *manager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        manager = [[ZRImageManager alloc] init];
+        manager.images = [NSMutableDictionary dictionary];
+    });
+    
+    return manager;
+}
 
 @end

@@ -7,7 +7,12 @@
 //
 
 #import "UIImageView+ZRClip.h"
+#import "UIImage+ZRClip.h"
 
 @implementation UIImageView (ZRClip)
+
++ (instancetype)zr_clipRoundedImageWithImageName:(NSString * _Nonnull)imageName {
+    return [[UIImageView alloc] initWithImage:[UIImage zr_clipRoundedImageWithImageName:imageName]];
+}
 
 @end
