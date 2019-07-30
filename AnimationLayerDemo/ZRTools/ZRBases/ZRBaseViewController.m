@@ -55,7 +55,7 @@
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-    
+    [super viewDidDisappear:animated];
 //    [MBProgressHUD DQHideHUD];
 }
 

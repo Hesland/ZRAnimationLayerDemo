@@ -7,8 +7,7 @@
 //
 
 #import "ZRBaseViewController.h"
-
-@class ZRBaseCollectionView;
+#import "ZRBaseCollectionView.h"
 
 @interface ZRCollectionViewController : ZRBaseViewController
 

@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		9001742D22F0326C001A21CC /* ZRTransViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9001742C22F0326C001A21CC /* ZRTransViewController.m */; };
+		9001743322F04E15001A21CC /* ZRChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9001743222F04E15001A21CC /* ZRChatListViewController.m */; };
+		9001743822F0507C001A21CC /* ZRChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9001743622F0507C001A21CC /* ZRChatTableViewCell.m */; };
+		9001743922F0507C001A21CC /* ZRChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9001743722F0507C001A21CC /* ZRChatTableViewCell.xib */; };
+		9001743C22F05996001A21CC /* ZRChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9001743B22F05996001A21CC /* ZRChatViewController.m */; };
+		9001743F22F059F6001A21CC /* ZRChatCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9001743E22F059F6001A21CC /* ZRChatCollectionViewController.m */; };
+		9001744622F07247001A21CC /* ZRBaseTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9001744522F07247001A21CC /* ZRBaseTransitionAnimator.m */; };
+		9001744922F072B3001A21CC /* ZRChatPresentTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9001744822F072B3001A21CC /* ZRChatPresentTransitionAnimator.m */; };
+		9001744C22F072C2001A21CC /* ZRChatDismissTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9001744B22F072C2001A21CC /* ZRChatDismissTransitionAnimator.m */; };
 		900D66BF22E9A6690029F283 /* ZREmitterAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 900D66BE22E9A6690029F283 /* ZREmitterAnimationViewController.m */; };
 		90495B3422D2294900AE3A3F /* UIView+QuartzDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 90495B3322D2294900AE3A3F /* UIView+QuartzDemo.m */; };
 		90495B3C22D5767B00AE3A3F /* ZRHistogramNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90495B3B22D5767B00AE3A3F /* ZRHistogramNavController.m */; };
@@ -59,6 +67,21 @@
 /* Begin PBXFileReference section */
 		9001742B22F0326C001A21CC /* ZRTransViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRTransViewController.h; sourceTree = "<group>"; };
 		9001742C22F0326C001A21CC /* ZRTransViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRTransViewController.m; sourceTree = "<group>"; };
+		9001743122F04E15001A21CC /* ZRChatListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRChatListViewController.h; sourceTree = "<group>"; };
+		9001743222F04E15001A21CC /* ZRChatListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRChatListViewController.m; sourceTree = "<group>"; };
+		9001743522F0507C001A21CC /* ZRChatTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRChatTableViewCell.h; sourceTree = "<group>"; };
+		9001743622F0507C001A21CC /* ZRChatTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRChatTableViewCell.m; sourceTree = "<group>"; };
+		9001743722F0507C001A21CC /* ZRChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZRChatTableViewCell.xib; sourceTree = "<group>"; };
+		9001743A22F05996001A21CC /* ZRChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRChatViewController.h; sourceTree = "<group>"; };
+		9001743B22F05996001A21CC /* ZRChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRChatViewController.m; sourceTree = "<group>"; };
+		9001743D22F059F6001A21CC /* ZRChatCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRChatCollectionViewController.h; sourceTree = "<group>"; };
+		9001743E22F059F6001A21CC /* ZRChatCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRChatCollectionViewController.m; sourceTree = "<group>"; };
+		9001744422F07247001A21CC /* ZRBaseTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRBaseTransitionAnimator.h; sourceTree = "<group>"; };
+		9001744522F07247001A21CC /* ZRBaseTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRBaseTransitionAnimator.m; sourceTree = "<group>"; };
+		9001744722F072B3001A21CC /* ZRChatPresentTransitionAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRChatPresentTransitionAnimator.h; sourceTree = "<group>"; };
+		9001744822F072B3001A21CC /* ZRChatPresentTransitionAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRChatPresentTransitionAnimator.m; sourceTree = "<group>"; };
+		9001744A22F072C2001A21CC /* ZRChatDismissTransitionAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRChatDismissTransitionAnimator.h; sourceTree = "<group>"; };
+		9001744B22F072C2001A21CC /* ZRChatDismissTransitionAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRChatDismissTransitionAnimator.m; sourceTree = "<group>"; };
 		900D66BD22E9A6690029F283 /* ZREmitterAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZREmitterAnimationViewController.h; sourceTree = "<group>"; };
 		900D66BE22E9A6690029F283 /* ZREmitterAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZREmitterAnimationViewController.m; sourceTree = "<group>"; };
 		90495B3222D2294900AE3A3F /* UIView+QuartzDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+QuartzDemo.h"; sourceTree = "<group>"; };
@@ -166,6 +189,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9001743422F0502E001A21CC /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				9001744322F071CA001A21CC /* TransitionAnimators */,
+				9001743122F04E15001A21CC /* ZRChatListViewController.h */,
+				9001743222F04E15001A21CC /* ZRChatListViewController.m */,
+				9001743A22F05996001A21CC /* ZRChatViewController.h */,
+				9001743B22F05996001A21CC /* ZRChatViewController.m */,
+				9001743D22F059F6001A21CC /* ZRChatCollectionViewController.h */,
+				9001743E22F059F6001A21CC /* ZRChatCollectionViewController.m */,
+				9001743522F0507C001A21CC /* ZRChatTableViewCell.h */,
+				9001743622F0507C001A21CC /* ZRChatTableViewCell.m */,
+				9001743722F0507C001A21CC /* ZRChatTableViewCell.xib */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		9001744322F071CA001A21CC /* TransitionAnimators */ = {
+			isa = PBXGroup;
+			children = (
+				9001744422F07247001A21CC /* ZRBaseTransitionAnimator.h */,
+				9001744522F07247001A21CC /* ZRBaseTransitionAnimator.m */,
+				9001744722F072B3001A21CC /* ZRChatPresentTransitionAnimator.h */,
+				9001744822F072B3001A21CC /* ZRChatPresentTransitionAnimator.m */,
+				9001744A22F072C2001A21CC /* ZRChatDismissTransitionAnimator.h */,
+				9001744B22F072C2001A21CC /* ZRChatDismissTransitionAnimator.m */,
+			);
+			path = TransitionAnimators;
+			sourceTree = "<group>";
+		};
 		90495B4122D576BB00AE3A3F /* Navigations */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +422,7 @@
 				900D66BE22E9A6690029F283 /* ZREmitterAnimationViewController.m */,
 				9001742B22F0326C001A21CC /* ZRTransViewController.h */,
 				9001742C22F0326C001A21CC /* ZRTransViewController.m */,
+				9001743422F0502E001A21CC /* Chat */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -488,6 +542,7 @@
 				90A63E4122CF39AD00FC773A /* LaunchScreen.storyboard in Resources */,
 				90A63E3E22CF39AD00FC773A /* Assets.xcassets in Resources */,
 				90495BC722D580B100AE3A3F /* README.md in Resources */,
+				9001743922F0507C001A21CC /* ZRChatTableViewCell.xib in Resources */,
 				90495BBC22D580B100AE3A3F /* LICENSE in Resources */,
 				90A63E3C22CF39AB00FC773A /* Main.storyboard in Resources */,
 			);
@@ -508,8 +563,10 @@
 				904FCB4922E1722100A25AB3 /* UIImage+ZRClip.m in Sources */,
 				90495B9722D57F8100AE3A3F /* ZRBaseScrollView.m in Sources */,
 				90495BBD22D580B100AE3A3F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				9001744C22F072C2001A21CC /* ZRChatDismissTransitionAnimator.m in Sources */,
 				90495BC122D580B100AE3A3F /* MASLayoutConstraint.m in Sources */,
 				90A63E4422CF39AD00FC773A /* main.m in Sources */,
+				9001743C22F05996001A21CC /* ZRChatViewController.m in Sources */,
 				90495B3F22D5769B00AE3A3F /* ZRChartNavController.m in Sources */,
 				904FCB4222DF6DE800A25AB3 /* ZRClockViewController.m in Sources */,
 				90495B3422D2294900AE3A3F /* UIView+QuartzDemo.m in Sources */,
@@ -519,16 +576,20 @@
 				904FCB5222E1A64500A25AB3 /* UIImage+ZRWebCache.m in Sources */,
 				90495B9422D57F8100AE3A3F /* ZRCollectionViewController.m in Sources */,
 				90495B9922D57F8100AE3A3F /* ZRBaseViewController.m in Sources */,
+				9001743822F0507C001A21CC /* ZRChatTableViewCell.m in Sources */,
 				904FCB4522E049BA00A25AB3 /* ZRBasicAnimationViewController.m in Sources */,
+				9001743F22F059F6001A21CC /* ZRChatCollectionViewController.m in Sources */,
 				90495BC522D580B100AE3A3F /* MASViewConstraint.m in Sources */,
 				904FCB4F22E1A4F600A25AB3 /* UIImageView+ZRClip.m in Sources */,
 				90495B9B22D57F8100AE3A3F /* ZRTableViewController.m in Sources */,
 				90495BC022D580B100AE3A3F /* MASConstraintMaker.m in Sources */,
 				90495BC222D580B100AE3A3F /* NSArray+MASAdditions.m in Sources */,
 				90495B9822D57F8100AE3A3F /* ZRScrollViewController.m in Sources */,
+				9001743322F04E15001A21CC /* ZRChatListViewController.m in Sources */,
 				90495BBE22D580B100AE3A3F /* ViewController+MASAdditions.m in Sources */,
 				90495B9622D57F8100AE3A3F /* ZRBaseTabBarController.m in Sources */,
 				904FCB5522E42A8500A25AB3 /* ZRAnimationGroupViewController.m in Sources */,
+				9001744622F07247001A21CC /* ZRBaseTransitionAnimator.m in Sources */,
 				904FCB3722DF64F800A25AB3 /* ZRHistogramViewController.m in Sources */,
 				90495B9522D57F8100AE3A3F /* ZRBaseCollectionView.m in Sources */,
 				90495BC422D580B100AE3A3F /* MASConstraint.m in Sources */,
@@ -540,6 +601,7 @@
 				90495B9C22D57F8100AE3A3F /* ZRBaseNavigationController.m in Sources */,
 				900D66BF22E9A6690029F283 /* ZREmitterAnimationViewController.m in Sources */,
 				904FCB3B22DF655600A25AB3 /* ZRTabbarController.m in Sources */,
+				9001744922F072B3001A21CC /* ZRChatPresentTransitionAnimator.m in Sources */,
 				904FCB3522DF64F800A25AB3 /* ZRChartViewController.m in Sources */,
 				904FCB3622DF64F800A25AB3 /* ZRChartView.m in Sources */,
 			);

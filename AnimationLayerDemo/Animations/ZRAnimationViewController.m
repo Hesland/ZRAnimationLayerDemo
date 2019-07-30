@@ -7,13 +7,15 @@
 //
 
 #import "ZRClockViewController.h"
+#import "ZRTransViewController.h"
+#import "ZRChatListViewController.h"
 #import "ZRAnimationViewController.h"
 #import "ZRBasicAnimationViewController.h"
 #import "ZRAnimationGroupViewController.h"
 #import "ZREmitterAnimationViewController.h"
 #import "ZRKeyframeAnimationViewController.h"
 #import "ZRValueDistributionMapViewController.h"
-#import "ZRTransViewController.h"
+
 
 #define ZRTableViewCellCount 5
 
@@ -57,6 +59,7 @@
                             @{ @"id": @"distributionMap", @"title":@"distribution map", @"class": @"ZRValueDistributionMapViewController"},
                             @{ @"id": @"clock", @"title":@"clock", @"class": @"ZRClockViewController"},
                             @{ @"id": @"transition animation", @"title":@"transitionAnimation", @"class": @"ZRTransViewController"},
+                            @{ @"id": @"chat view", @"title":@"chat view", @"class": @"ZRChatListViewController"},
                             ];
     
     self.dataSource = dataSource;

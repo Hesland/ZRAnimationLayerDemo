@@ -7,9 +7,12 @@
 //
 
 #import "ZRBaseViewController.h"
+#import "ZRBaseTableView.h"
 
-@interface ZRTableViewController : ZRBaseViewController
+@interface ZRTableViewController : ZRBaseViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, assign) BOOL canRefresh;
+@property (nonatomic, strong) ZRBaseTableView *tableView;
+
 
 @end
