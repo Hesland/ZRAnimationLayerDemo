@@ -65,7 +65,7 @@
     keyframeAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     
     animGroup.animations = @[rotateAnim, scaleAnim, keyframeAnim];
-    animGroup.repeatCount = CGFLOAT_MAX;
+    animGroup.repeatCount = 5;
     animGroup.duration = 2;
     
     [self.animationItem addAnimation:animGroup forKey:@"animGroup"];

@@ -1,8 +1,8 @@
 //
-//  ZRKeyFrameAnimationViewController.h
+//  ZRValueDistributionMapViewController.h
 //  AnimationLayerDemo
 //
-//  Created by Hesland on 2019/7/21.
+//  Created by Hesland on 2019/7/22.
 //  Copyright © 2019 ZRTools. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZRKeyframeAnimationViewController : ZRBaseViewController
+@interface ZRValueDistributionMapViewController : ZRBaseViewController
 
 @end
 

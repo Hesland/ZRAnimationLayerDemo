@@ -32,9 +32,7 @@
 
 - (void)drawRect:(CGRect)rect {
     // 布置坐标线
-    
     [self zr_drawMedianLineWithRect:rect];
-    
 }
 
 - (void)zr_drawMedianLineWithRect:(CGRect)rect {

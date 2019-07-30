@@ -13,6 +13,8 @@
 #import "ZRHistogramViewController.h"
 #import "ZRAnimationViewController.h"
 
+#import "ZRTransViewController.h"
+
 @implementation ZRTabbarController
 
 - (void)viewDidLoad {
@@ -20,12 +22,7 @@
     
     ZRChartNavController *chartNavi = [[ZRChartNavController alloc] initWithRootViewController:[[ZRChartViewController alloc] init]];
     ZRHistogramNavController *histogramNavi = [[ZRHistogramNavController alloc] initWithRootViewController:[[ZRHistogramViewController alloc] init]];
-    
     ZRBaseNavigationController *animationNavi = [[ZRBaseNavigationController alloc] initWithRootViewController:[[ZRAnimationViewController alloc] init]];
-    
-    chartNavi.title = @"chart";
-    histogramNavi.title = @"histogram";
-    animationNavi.title = @"animations";
     
     [self addChildViewController:chartNavi];
     [self addChildViewController:histogramNavi];

@@ -6,13 +6,13 @@
 //  Copyright © 2019 ZRTools. All rights reserved.
 //
 
-#import "ZRKeyFrameAnimationViewController.h"
+#import "ZRKeyframeAnimationViewController.h"
 
-@interface ZRKeyFrameAnimationViewController ()
+@interface ZRKeyframeAnimationViewController ()
 
 @end
 
-@implementation ZRKeyFrameAnimationViewController
+@implementation ZRKeyframeAnimationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
