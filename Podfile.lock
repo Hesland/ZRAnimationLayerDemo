@@ -6,17 +6,17 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
-  - Flutter (from `/Users/hesland/Desktop/ZRAnimationLayerDemo/flutter_module/.ios/Flutter/engine`)
-  - flutter_module (from `/Users/hesland/Desktop/ZRAnimationLayerDemo/flutter_module/.ios/Flutter`)
-  - FlutterPluginRegistrant (from `/Users/hesland/Desktop/ZRAnimationLayerDemo/flutter_module/.ios/Flutter/FlutterPluginRegistrant`)
+  - Flutter (from `/Users/hesland/Desktop/HybridApp/flutter_module/.ios/Flutter/engine`)
+  - flutter_module (from `/Users/hesland/Desktop/HybridApp/flutter_module/.ios/Flutter`)
+  - FlutterPluginRegistrant (from `/Users/hesland/Desktop/HybridApp/flutter_module/.ios/Flutter/FlutterPluginRegistrant`)
 
 EXTERNAL SOURCES:
   Flutter:
-    :path: "/Users/hesland/Desktop/ZRAnimationLayerDemo/flutter_module/.ios/Flutter/engine"
+    :path: "/Users/hesland/Desktop/HybridApp/flutter_module/.ios/Flutter/engine"
   flutter_module:
-    :path: "/Users/hesland/Desktop/ZRAnimationLayerDemo/flutter_module/.ios/Flutter"
+    :path: "/Users/hesland/Desktop/HybridApp/flutter_module/.ios/Flutter"
   FlutterPluginRegistrant:
-    :path: "/Users/hesland/Desktop/ZRAnimationLayerDemo/flutter_module/.ios/Flutter/FlutterPluginRegistrant"
+    :path: "/Users/hesland/Desktop/HybridApp/flutter_module/.ios/Flutter/FlutterPluginRegistrant"
 
 SPEC CHECKSUMS:
   Flutter: 58dd7d1b27887414a370fcccb9e645c08ffd7a6a

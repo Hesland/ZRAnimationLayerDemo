@@ -9,9 +9,12 @@
 #import "ZRChartView.h"
 #import "ZRChartViewController.h"
 
+#define ZRChartDataCount 100
+
 @interface ZRChartViewController ()<ZRChartViewDataSource>
 
 @property (nonatomic, strong) ZRChartView *chartView;
+@property (nonatomic, copy) NSArray<NSNumber *> *data;
 
 
 @end
@@ -26,17 +29,27 @@
     
     [self.view addSubview:self.chartView];
     
+    NSMutableArray *data_tmp = [NSMutableArray arrayWithCapacity:ZRChartDataCount];
+    for (NSInteger i = 0; i < ZRChartDataCount; i ++) {
+         double value = (double)arc4random_uniform(599);
+        [data_tmp addObject:@(value - 300.0)];
+    }
+    self.data = [data_tmp copy];
     self.chartView.dataSource = self;
+    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self.chartView setNeedsDisplay];
+//    });
 }
 
 #pragma mark - ZRChartViewDataSource
 
 - (NSInteger)numberOfPointsInChart {
-    return 1;
+    return ZRChartDataCount;
 }
 
-- (CGPoint)chartView:(ZRChartView *)chartView atIndex:(NSIndexPath *)indexPath {
-    return CGPointMake(0, 0);
+- (double)chartView:(ZRChartView *)chartView valueAtIndex:(NSIndexPath *)indexPath {
+    return [self.data[indexPath.row] doubleValue];
 }
 
 @end

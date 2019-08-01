@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSInteger)numberOfPointsInChart;
 
-- (CGPoint)chartView:(ZRChartView *)chartView atIndex:(NSIndexPath *)indexPath;
+- (double)chartView:(ZRChartView *)chartView valueAtIndex:(NSIndexPath *)indexPath;
 
 @end
 

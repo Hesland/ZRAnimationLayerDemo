@@ -57,6 +57,7 @@
     [super viewDidLoad];
     
     self.title = @"distribution map demo";
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self createDistributionBackground];
     [self createDistributionValueLayer];
@@ -141,13 +142,13 @@
         
         if (groupIndex == pointGroups.count - 1) {
             // 绘制网格线
-            CGFloat pattern[] = {15, 10};
-            [path setLineDash:pattern count:2 phase:0];
-
             for (NSValue *point in points) {
                 [path moveToPoint:CGPointMake(ZRRadius, ZRRadius)];
                 [path addLineToPoint:point.CGPointValue];
             }
+            
+            CGFloat pattern[] = {3, 3};
+            [path setLineDash:pattern count:2 phase:2];
         }
         
     }];
