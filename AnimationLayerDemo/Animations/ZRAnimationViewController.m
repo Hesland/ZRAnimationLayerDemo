@@ -30,7 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"animations";
+    self.title = @"Animations";
     
     self.tableView = [[UITableView alloc] initWithFrame:SCREEN_BOUNDS];
     self.tableView.delegate = self;

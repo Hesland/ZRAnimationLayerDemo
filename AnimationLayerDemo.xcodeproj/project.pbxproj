@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -62,9 +62,13 @@
 		90A63E3E22CF39AD00FC773A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90A63E3D22CF39AD00FC773A /* Assets.xcassets */; };
 		90A63E4122CF39AD00FC773A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A63E3F22CF39AD00FC773A /* LaunchScreen.storyboard */; };
 		90A63E4422CF39AD00FC773A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A63E4322CF39AD00FC773A /* main.m */; };
+		90C16E4022F3253100502409 /* ZRFlutterBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C16E3F22F3253100502409 /* ZRFlutterBaseViewController.m */; };
+		AD3E0F8C36A5AE7F50A49081 /* Pods_AnimationLayerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E96026D76D14D41167DC569 /* Pods_AnimationLayerDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E96026D76D14D41167DC569 /* Pods_AnimationLayerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationLayerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		823BEC4C2BF92A21B884ABAB /* Pods-AnimationLayerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationLayerDemo.release.xcconfig"; path = "Target Support Files/Pods-AnimationLayerDemo/Pods-AnimationLayerDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9001742B22F0326C001A21CC /* ZRTransViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRTransViewController.h; sourceTree = "<group>"; };
 		9001742C22F0326C001A21CC /* ZRTransViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRTransViewController.m; sourceTree = "<group>"; };
 		9001743122F04E15001A21CC /* ZRChatListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRChatListViewController.h; sourceTree = "<group>"; };
@@ -176,6 +180,9 @@
 		90A63E4022CF39AD00FC773A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90A63E4222CF39AD00FC773A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90A63E4322CF39AD00FC773A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		90C16E3E22F3253100502409 /* ZRFlutterBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRFlutterBaseViewController.h; sourceTree = "<group>"; };
+		90C16E3F22F3253100502409 /* ZRFlutterBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRFlutterBaseViewController.m; sourceTree = "<group>"; };
+		A9AA76D1FE5D0818132A32C6 /* Pods-AnimationLayerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationLayerDemo.debug.xcconfig"; path = "Target Support Files/Pods-AnimationLayerDemo/Pods-AnimationLayerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,12 +190,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD3E0F8C36A5AE7F50A49081 /* Pods_AnimationLayerDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		872E23BF57694CC538F32873 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E96026D76D14D41167DC569 /* Pods_AnimationLayerDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9001743422F0502E001A21CC /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,6 +463,8 @@
 			children = (
 				90A63E3322CF39AB00FC773A /* AnimationLayerDemo */,
 				90A63E3222CF39AB00FC773A /* Products */,
+				DA15720ECCF0C76FA586A175 /* Pods */,
+				872E23BF57694CC538F32873 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -461,6 +479,7 @@
 		90A63E3322CF39AB00FC773A /* AnimationLayerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				90C16E3D22F3251900502409 /* Flutter */,
 				90495B9E22D580B100AE3A3F /* ThirdPartys */,
 				90495B7622D57F8100AE3A3F /* ZRTools */,
 				904FCB3822DF655600A25AB3 /* TabBar */,
@@ -482,6 +501,24 @@
 			path = AnimationLayerDemo;
 			sourceTree = "<group>";
 		};
+		90C16E3D22F3251900502409 /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				90C16E3E22F3253100502409 /* ZRFlutterBaseViewController.h */,
+				90C16E3F22F3253100502409 /* ZRFlutterBaseViewController.m */,
+			);
+			path = Flutter;
+			sourceTree = "<group>";
+		};
+		DA15720ECCF0C76FA586A175 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9AA76D1FE5D0818132A32C6 /* Pods-AnimationLayerDemo.debug.xcconfig */,
+				823BEC4C2BF92A21B884ABAB /* Pods-AnimationLayerDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -489,9 +526,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90A63E4722CF39AD00FC773A /* Build configuration list for PBXNativeTarget "AnimationLayerDemo" */;
 			buildPhases = (
+				052EE5218A2759CF2D49A501 /* [CP] Check Pods Manifest.lock */,
+				EFDF702CD3E7599B68140243 /* [CP-User] Run Flutter Build Script */,
 				90A63E2D22CF39AB00FC773A /* Sources */,
 				90A63E2E22CF39AB00FC773A /* Frameworks */,
 				90A63E2F22CF39AB00FC773A /* Resources */,
+				7DAB80062F00F0B9F5222CB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -550,6 +590,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		052EE5218A2759CF2D49A501 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimationLayerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DAB80062F00F0B9F5222CB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimationLayerDemo/Pods-AnimationLayerDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimationLayerDemo/Pods-AnimationLayerDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnimationLayerDemo/Pods-AnimationLayerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFDF702CD3E7599B68140243 /* [CP-User] Run Flutter Build Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/./flutter_module/.metadata",
+				"${SRCROOT}/flutter_module/.ios/Flutter/App.framework/App",
+				"${SRCROOT}/flutter_module/.ios/Flutter/engine/Flutter.framework/Flutter",
+				"${SRCROOT}/flutter_module/.ios/Flutter/flutter_export_environment.sh",
+			);
+			name = "[CP-User] Run Flutter Build Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "source \"${SRCROOT}/flutter_module/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		90A63E2D22CF39AB00FC773A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -583,6 +681,7 @@
 				904FCB4F22E1A4F600A25AB3 /* UIImageView+ZRClip.m in Sources */,
 				90495B9B22D57F8100AE3A3F /* ZRTableViewController.m in Sources */,
 				90495BC022D580B100AE3A3F /* MASConstraintMaker.m in Sources */,
+				90C16E4022F3253100502409 /* ZRFlutterBaseViewController.m in Sources */,
 				90495BC222D580B100AE3A3F /* NSArray+MASAdditions.m in Sources */,
 				90495B9822D57F8100AE3A3F /* ZRScrollViewController.m in Sources */,
 				9001743322F04E15001A21CC /* ZRChatListViewController.m in Sources */,
@@ -664,6 +763,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -723,6 +823,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -743,6 +844,7 @@
 		};
 		90A63E4822CF39AD00FC773A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9AA76D1FE5D0818132A32C6 /* Pods-AnimationLayerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -762,6 +864,7 @@
 		};
 		90A63E4922CF39AD00FC773A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 823BEC4C2BF92A21B884ABAB /* Pods-AnimationLayerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
